@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
-namespace MeiliSearch;
-
-class MeiliSearch
-{
-    public const VERSION = '0.26.0';
-
-    public static function qualifiedVersion()
+namespace Meilisearch {
+    class Meilisearch
     {
-        return sprintf('Meilisearch PHP (v%s)', MeiliSearch::VERSION);
+        public const VERSION = '0.26.0';
+    
+        public static function qualifiedVersion()
+        {
+            return sprintf('Meilisearch PHP (v%s)', self::VERSION);
+        }
     }
-}
+};
+
+// Fallback for laravel/scout to not break backwards compatibility
+namespace MeiliSearch {
+    class MeiliSearch extends Meilisearch\Meilisearch {}
+};

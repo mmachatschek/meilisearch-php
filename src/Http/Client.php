@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace MeiliSearch\Http;
+namespace Meilisearch\Http;
 
 use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
-use MeiliSearch\Contracts\Http;
-use MeiliSearch\Exceptions\ApiException;
-use MeiliSearch\Exceptions\CommunicationException;
-use MeiliSearch\Exceptions\InvalidResponseBodyException;
-use MeiliSearch\Exceptions\JsonDecodingException;
-use MeiliSearch\Exceptions\JsonEncodingException;
-use MeiliSearch\Http\Serialize\Json;
-use MeiliSearch\MeiliSearch;
+use Meilisearch\Contracts\Http;
+use Meilisearch\Exceptions\ApiException;
+use Meilisearch\Exceptions\CommunicationException;
+use Meilisearch\Exceptions\InvalidResponseBodyException;
+use Meilisearch\Exceptions\JsonDecodingException;
+use Meilisearch\Exceptions\JsonEncodingException;
+use Meilisearch\Http\Serialize\Json;
+use Meilisearch\MeiliSearch;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Client\NetworkExceptionInterface;
