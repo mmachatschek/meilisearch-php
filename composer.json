@@ -1,5 +1,5 @@
 {
-    "name": "meilisearch/meilisearch-php",
+    "name": "mmachatschek/meilisearch-php",
     "description": "PHP wrapper for the Meilisearch API",
     "keywords": [
         "meilisearch",
@@ -26,8 +26,11 @@
         "php-http/client-common": "^2.0"
     },
     "autoload": {
+        "classmap": [
+          "src_legacy/"
+        ],
         "psr-4": {
-            "MeiliSearch\\": "src/"
+            "Meilisearch\\": "src/"
         }
     },
     "autoload-dev": {
