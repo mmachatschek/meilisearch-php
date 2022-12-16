@@ -13,7 +13,7 @@ use Meilisearch\Exceptions\InvalidResponseBodyException;
 use Meilisearch\Exceptions\JsonDecodingException;
 use Meilisearch\Exceptions\JsonEncodingException;
 use Meilisearch\Http\Serialize\Json;
-use Meilisearch\MeiliSearch;
+use Meilisearch\Meilisearch;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Client\NetworkExceptionInterface;
@@ -49,7 +49,7 @@ class Client implements Http
         $this->requestFactory = $reqFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
         $this->headers = array_filter([
-            'User-Agent' => implode(';', array_merge($clientAgents, [MeiliSearch::qualifiedVersion()])),
+            'User-Agent' => implode(';', array_merge($clientAgents, [Meilisearch::qualifiedVersion()])),
         ]);
         if (null != $this->apiKey) {
             $this->headers['Authorization'] = sprintf('Bearer %s', $this->apiKey);

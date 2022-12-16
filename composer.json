@@ -26,9 +26,11 @@
         "php-http/client-common": "^2.0"
     },
     "autoload": {
+        "classmap": [
+          "src_legacy/"
+        ],
         "psr-4": {
-            "Meilisearch\\": "src/",
-            "MeiliSearch\\": "src/"
+            "Meilisearch\\": "src/"
         }
     },
     "autoload-dev": {
